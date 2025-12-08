@@ -1594,3 +1594,325 @@ fill: white;
     }
 }
 
+
+
+
+
+/* Access Control  */
+.acs-hero {
+    position: relative;
+    width: 100%;
+}
+.acs-hero img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.acs-hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+.acs-hero-text h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+.acs-hero-text p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* ABOUT */
+.acs-about {
+    padding: 60px 8%;
+    background: #fff;
+}
+.acs-about h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.acs-about p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* FEATURES */
+.acs-features {
+    padding: 60px 8%;
+    background: #f6f6f6;
+}
+.acs-features h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.acs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.acs-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: .3s;
+}
+.acs-card:hover {
+    transform: translateY(-8px);
+}
+.acs-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.acs-card h3 {
+    margin: 15px 20px 10px;
+    font-size: 20px;
+}
+.acs-card p {
+    margin: 0 20px 20px;
+    font-size: 15px;
+    color: #555;
+}
+
+/* GALLERY */
+.acs-gallery {
+    padding: 60px 8%;
+}
+.acs-gallery h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+.gallery-grid img {
+    width: 100%;
+    height: 230px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* WHY US */
+.acs-why {
+    padding: 60px 8%;
+    background: #eef1f4;
+}
+.acs-why h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.acs-why ul {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #333;
+}
+
+/* CTA */
+.acs-cta {
+    text-align: center;
+    padding: 70px 8%;
+    background: #1c3f7c;
+    color: #fff;
+}
+.acs-btn {
+    display: inline-block;
+    margin-top: 18px;
+    background: #ffce00;
+    padding: 12px 28px;
+    font-size: 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media(max-width: 992px) {
+    .acs-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media(max-width: 600px) {
+    .acs-hero-text h1 { font-size: 26px; }
+    .acs-hero-text p { font-size: 14px; }
+
+    .acs-about h2,
+    .acs-features h2,
+    .acs-gallery h2,
+    .acs-why h2 { font-size: 24px; }
+
+    .acs-grid { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
+}
+
+
+
+
+
+
+/* Door Frame Metal Detectors page  */
+/* HERO */
+.dfmd-hero {
+    position: relative;
+}
+.dfmd-hero img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.dfmd-hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+.dfmd-hero-text h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+.dfmd-hero-text p {
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+/* ABOUT */
+.dfmd-about {
+    padding: 60px 8%;
+}
+.dfmd-about h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.dfmd-about p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* FEATURES */
+.dfmd-features {
+    background: #f7f7f7;
+    padding: 60px 8%;
+}
+.dfmd-features h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+.dfmd-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.dfmd-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: .3s;
+}
+.dfmd-card:hover { transform: translateY(-8px); }
+.dfmd-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.dfmd-card h3 {
+    margin: 15px 20px 10px;
+}
+.dfmd-card p {
+    margin: 0 20px 20px;
+    color: #555;
+}
+
+/* MODELS */
+.dfmd-models {
+    padding: 60px 8%;
+}
+.dfmd-models h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.models-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.model-box {
+    text-align: center;
+}
+.model-box img {
+    width: 100%;
+    height: 230px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+.model-box h3 {
+    margin-top: 15px;
+}
+
+/* WORKING */
+.dfmd-working {
+    padding: 60px 8%;
+    background: #eef1f4;
+}
+.dfmd-working h2 {
+    font-size: 30px;
+}
+.dfmd-working ul {
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+/* WHY US */
+.dfmd-why {
+    padding: 60px 8%;
+}
+.dfmd-why h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.dfmd-why ul {
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+/* CTA */
+.dfmd-cta {
+    text-align: center;
+    padding: 70px 8%;
+    background: #1f3b7d;
+    color: #fff;
+}
+.dfmd-btn {
+    margin-top: 18px;
+    padding: 12px 28px;
+    display: inline-block;
+    background: #ffcf00;
+    color: #000;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media(max-width: 992px) {
+    .dfmd-grid,
+    .models-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media(max-width: 600px) {
+    .dfmd-hero-text h1 { font-size: 26px; }
+    .dfmd-grid,
+    .models-grid { grid-template-columns: 1fr; }
+}
