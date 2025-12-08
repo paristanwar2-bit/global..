@@ -209,7 +209,7 @@ body{overflow-x:hidden;}
 /* BANNER */
 .banner{
     width:100%;
-    height:95vh;
+    height:85vh;
     background:url('globalimages/banner.jpeg') center/cover no-repeat;
     display:flex;
     align-items:center;
@@ -222,7 +222,7 @@ body{overflow-x:hidden;}
     position:absolute;
     top:0; left:0;
     width:100%;
-     height:100%;
+    height:100%;
     background:rgba(0,0,0,0.4);
 }
 .banner-content{
