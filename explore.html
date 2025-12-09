@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Infotel Solutions</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="all.css" />
+</head>
+<body>
+
+   <header class="navbar">
+
+    <div class="logo">
+    <img src="globalimages/GIS LOGO NEW.jpg" alt="Logo">
+    <span class="logo-name">Global Infotel Solutions</span>
+</div>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" id="menuBtn">
+        <span class="open-icon">☰</span>
+        <span class="close-icon">✕</span>
+    </div>
+
+    <ul class="menu" id="menuList">
+        <li><a href="index.html">HOME</a></li>
+
+        <li class="dropdown">
+     <a href="about.html" class="dropMain">ABOUT US</a>
+             <span class="dropBtnArrow">▼</span>
+            <ul class="dropMenu">
+                <li><a href="mission&vision.html">Mission&Vision</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+     <a href="products.html" class="dropMain">PRODUCTS</a>
+             <span class="dropBtnArrow">▼</span>
+
+    <ul class="dropMenu">
+
+        <!-- COLUMN 1 -->
+        <li>
+            <strong style="color:#000; font-size:16px; font-weight:600;">
+                License Free Walkie Talkies >
+            </strong>
+            <ul class="sub-menu">
+                <li><a href="#">Access P2</a></li>
+                <li><a href="#">Access P9</a></li>
+                <li><a href="#">Access P3</a></li>
+                <li><a href="#">Access P1 Relay</a></li>
+                <li><a href="#">Lenovo N99</a></li>
+                <li><a href="#">Lenovo N89 Digital</a></li>
+                <li><a href="#">Lenovo N7</a></li>
+                <li><a href="#">Lenovo CC100</a></li>
+                <li><a href="#">Kanwee K50</a></li>
+                <li><a href="#">Kanwee K100</a></li>
+                <li><a href="#">Kanwee K10</a></li>
+                <li><a href="#">Kanwee K20</a></li>
+                <li><a href="#">Kanwee K60 Digital</a></li>
+                <li><a href="#">Alinco DJ-VX46</a></li>
+            </ul>
+        </li>
+
+        <!-- COLUMN 2 -->
+        <li>
+            <strong style="color:#000; font-size:16px; font-weight:600;">
+                License Free Intrinsically Safe >
+            </strong>
+            <ul class="sub-menu">
+                <li><a href="#">Alinco DJ-X15-45</a></li>
+                <li><a href="#">Hytera HP708 IS LF</a></li>
+                <li><a href="#">Hytera HP508 IS LF</a></li>
+            </ul>
+        </li>
+
+        <!-- COLUMN 3 -->
+        <li>
+            <strong style="color:#000; font-size:16px; font-weight:600;">
+                POC Radios >
+            </strong>
+            <ul class="sub-menu">
+                <li><a href="#">Hytera P50</a></li>
+                <li><a href="#">Hytera P50 Pro</a></li>
+                <li><a href="#">Hytera PNC 380</a></li>
+                <li><a href="#">Hytera PNC 360</a></li>
+                <li><a href="#">Hytera MNC 360</a></li>
+            </ul>
+        </li>
+        <!-- COLUMN 4 -->
+        <li>
+            <strong style="color:#000; font-size:16px; font-weight:600;">
+                All Solutions >
+            </strong>
+            <ul class="sub-menu">
+                <li><a href="cctv.html">Cctv</a></li>
+                <li><a href="Access Control.html">Access Control</a></li>
+                <li><a href="walkie talkie.html">Two Way Radios- Walkie Talkie</a></li>
+                <li><a href="Hand Held Metal Detectors.html">Hand Held Metal Detectors</a></li>
+                <li><a href="Door Frame.html">Door Frame Metal Detectors</a></li>
+            </ul>
+        </li>
+
+    </ul>
+</li>
+
+        <li><a href="sevices.html">SERVICES</a></li>
+
+        <li><a href="contact.html">CONTACT US</a></li>
+    </ul>
+
+</header>
+
+<section class="product-detail">
+    <style>
+
+        header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+body {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+        .product-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px 5%;
+    flex-wrap: wrap;
+}
+
+.product-section{
+    margin-top: 80px;
+}
+
+.product-details{
+    margin-top: 50px;
+}
+
+.single-product-container{
+    margin-top:60px;
+}
+
+.product-image img {
+    width: 420px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.product-info h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #444;
+}
+
+.rating {
+    color: #f7b500;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.rating span {
+    color: #555;
+    font-size: 16px;
+}
+
+.price-box {
+    margin: 12px 0;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #d9534f;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.new-price {
+    color: #28a745;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 16px;
+    color: #555;
+    margin-top: 15px;
+    max-width: 550px;
+    line-height: 1.6;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-shop {
+    background: #0099ff;
+    padding: 12px 22px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-shop:hover {
+    background: #007acc;
+}
+
+.btn-cart {
+    background: #ff9800;
+    padding: 12px 22px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-cart:hover {
+    background: #e68900;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .product-detail {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .description {
+        margin: 0 auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+}
+    </style>
+
+    <div class="product-image">
+        <img src="globalimages/walkie talkie.jpeg" alt="Access P2">
+    </div>
+
+    <div class="product-info">
+        <h1>Access P2</h1>
+
+        <div class="rating">
+            ★★★★☆ <span>(4.0/5)</span>
+        </div>
+
+        <div class="price-box">
+            <span class="old-price">₹00.00</span>
+            <span class="new-price">₹00.00</span>
+        </div>
+
+        <p class="description">
+            Access P2 is a high-performance license-free walkie-talkie designed 
+            for clear communication, durable usage, and long-range connectivity. 
+            Ideal for security teams, events, corporate premises, industrial sites, 
+            and outdoor activities.
+        </p>
+
+        <div class="buttons">
+            <a href="explore.html" class="btn-shop">Shop Now</a>
+            <a href="#" class="btn-cart">Add to Cart</a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ----------PRODUCT SECTION---------- -->
+<div class="global-products">
+    <h2>Related Products</h2>
+
+    <div class="global-container">
+
+        <!-- CARD 1 -->
+        <div class="global-card">
+            <div class="global-img-box">
+                <img src="globalimages/wt1.jpeg">
+                <div class="global-gradient"></div>
+                <p class="global-title">Access P9</p>
+            </div>
+
+            <div class="global-info">
+                <p class="global-desc">Premium quality wireless device with advance features...</p>
+
+                <div class="global-buttons">
+                    <button class="btn-price">₹00.00</button>
+                    <a href="explore.html"><button class="btn-cart">Add to Cart</button></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="global-card">
+            <div class="global-img-box">
+                <img src="globalimages/wt2.jpeg">
+                <div class="global-gradient"></div>
+                <p class="global-title">Access P3</p>
+            </div>
+
+            <div class="global-info">
+                <p class="global-desc">High-performance compact communication solution...</p>
+
+                <div class="global-buttons">
+                    <button class="btn-price">₹00.00</button>
+                    <a href="explore.html"><button class="btn-cart">Add to Cart</button></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="global-card">
+            <div class="global-img-box">
+                <img src="globalimages/wt3.jpeg">
+                <div class="global-gradient"></div>
+                <p class="global-title">Access P1 Relay</p>
+            </div>
+
+            <div class="global-info">
+                <p class="global-desc">Reliable relay system for professional communication...</p>
+
+                <div class="global-buttons">
+                    <button class="btn-price">₹00.00</button>
+                    <a href="explore.html"><button class="btn-cart">Add to Cart</button></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="global-card">
+            <div class="global-img-box">
+                <img src="globalimages/wt4.jpeg">
+                <div class="global-gradient"></div>
+                <p class="global-title">Lenovo N99</p>
+            </div>
+
+            <div class="global-info">
+                <p class="global-desc">Advanced device built for strong heavy-duty usage...</p>
+
+                <div class="global-buttons">
+                    <button class="btn-price">₹00.00</button>
+                    <a href="explore.html"><button class="btn-cart">Add to Cart</button></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<style>
+/* ---------- GLOBAL PRODUCT SECTION ---------- */
+
+.global-products {
+    padding: 20px 40px;
+    width: 100%;
+}
+
+.global-products h2 {
+    font-size: 30px;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+/* GRID */
+.global-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.global-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    transition: .3s;
+}
+
+.global-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+/* IMAGE + GRADIENT BLACK STRIP */
+.global-img-box {
+    position: relative;
+}
+
+.global-img-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.global-gradient {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
+}
+
+/* TITLE ON GRADIENT */
+.global-title {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* CONTENT */
+.global-info {
+    padding: 12px 15px;
+}
+
+.global-desc {
+    font-size: 14px;
+    color: #666;
+    height: 42px;
+    overflow: hidden;
+}
+
+/* BUTTON AREA */
+.global-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+/* PRICE BUTTON */
+.btn-price {
+    background: #03A9F4;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ADD TO CART BUTTON */
+.btn-cart {
+    background: #FF9800;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media(max-width:600px){
+    .global-products { padding:15px; }
+}
+</style>
+
+<!-- footer  -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- LOGO + ABOUT -->
+    <div class="footer-box">
+      <img src="globalimages/GIS LOGO NEW.jpg" class="footer-logo" alt="Global Infotel Solutions Logo">
+
+      <p class="footer-about">
+        Global Infotel Solutions provides advanced and reliable security &
+        communication products including CCTV Cameras, Walkie Talkies,
+        Access Control Systems and Metal Detectors.
+      </p>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#products">Our Products</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT INFO -->
+    <div class="footer-box">
+      <h3>Contact Us</h3>
+
+      <p><strong>Email:</strong> info@globalinfotel.com</p>
+      <p><strong>Phone:</strong> +91 9876543210</p>
+
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+</div>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM CREDIT -->
+  <div class="footer-bottom">
+    © 2025 Global Infotel Solutions | Designed & Developed By 
+    <a href="https://tssgtech.com/" target="_blank">TSSG-TECH</a>
+  </div>
+</footer>
+
+<!-- Floating Buttons -->
+<div class="floating-actions">
+<!-- WhatsApp -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<a class="action-btn whatsapp" href="https://wa.me/9876543210?text=Hello" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+<!-- Call -->
+<a class="action-btn call" href="tel:9876543210">
+<svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 01.95-.27c1.04.27 2.16.42 3.32.42a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h2.5a1 1 0 011 1c0 1.16.15 2.28.42 3.32a1 1 0 01-.27.95l-2.03 2.52z"/></svg>
+</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

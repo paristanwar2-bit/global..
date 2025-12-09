@@ -33,7 +33,6 @@ body{overflow-x:hidden;}
     color: #000;
 }
 
-
 .menu {
     list-style: none;
     display: flex;
@@ -206,11 +205,140 @@ body{overflow-x:hidden;}
     background: #000;
 }
 
+.dropMain {
+    padding-right: 6px;
+    cursor: pointer;
+}
+
+.dropBtnArrow {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+/* DESKTOP PRODUCTS MEGA MENU SCROLL FIX */
+@media (min-width: 769px) {
+    .dropMenu {
+        max-height: calc(100vh - 120px); /* Screen के हिसाब से auto height */
+        overflow-y: auto;                /* Scroll enable */
+        overflow-x: hidden;              /* Horizontal scroll हटाया */
+        padding-right: 10px;             /* Scroll के लिए space */
+    }
+
+    /* Scrollbar डिजाइन */
+    .dropMenu::-webkit-scrollbar {
+        width: 8px;
+    }
+    .dropMenu::-webkit-scrollbar-thumb {
+        background: #bfbfbf;
+        border-radius: 10px;
+    }
+    .dropMenu::-webkit-scrollbar-thumb:hover {
+        background: #999;
+    }
+}
+
+/* ===============================
+   FULL WIDTH MEGA MENU (Desktop)
+   =============================== */
+@media (min-width: 769px) {
+    .dropdown {
+        position: static !important;
+    }
+
+    .dropMenu {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        display: none;
+        padding: 40px 60px;
+        background: #fff;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+        border-radius: 0;
+        z-index: 999;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        min-height: 230px;
+    }
+
+    .dropdown:hover .dropMenu {
+        display: grid !important;
+    }
+
+    .dropMenu li {
+        list-style: none;
+        padding: 6px 0;
+    }
+
+    .dropMenu li a {
+        font-size: 15px;
+        padding: 5px 0;
+        display: block;
+        color: #222;
+        font-weight: 500;
+    }
+
+    .dropMenu li a:hover {
+        color: #7aa62c;
+    }
+}
+
+/* ===============================
+   MOBILE MENU SCROLL FIX
+   =============================== */
+@media (max-width: 768px) {
+
+    /* पूरा mobile menu scrollable */
+    .menu {
+        max-height: calc(100vh - 65px);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    /* बड़ा dropdown हो तो अंदर भी scroll */
+    .dropMenu {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    /* scroll bar smooth रहे */
+    .menu::-webkit-scrollbar,
+    .dropMenu::-webkit-scrollbar {
+        width: 6px;
+    }
+    .menu::-webkit-scrollbar-thumb,
+    .dropMenu::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 10px;
+    }
+}
+
+/* DESKTOP PRODUCTS MEGA MENU SCROLL FIX */
+@media (min-width: 769px) {
+    .dropMenu {
+        max-height: 350px;       /* Dropdown की max height */
+        overflow-y: auto;        /* Scroll enable */
+        overflow-x: hidden;      /* Horizontal scroll हटाया */
+        padding-right: 10px;     /* Scroll के लिए space */
+    }
+
+    /* Scrollbar सुंदर दिखे */
+    .dropMenu::-webkit-scrollbar {
+        width: 6px;
+    }
+    .dropMenu::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 10px;
+    }
+}
+
+
 /* BANNER */
 .banner{
     width:100%;
     height:85vh;
-    background:url('globalimages/banner.jpeg') center/cover no-repeat;
+    background:url('globalimages/mission.jpeg') center/cover no-repeat;
     display:flex;
     align-items:center;
     padding:0 60px;

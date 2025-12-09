@@ -33,6 +33,44 @@ dropBtns.forEach((btn) => {
     });
 });
 
+// DESKTOP CLICK DROPDOWN
+document.querySelectorAll(".dropdown > .dropBtn").forEach(btn => {
+
+    btn.addEventListener("click", function (e) {
+        if (window.innerWidth < 769) return; // mobile ignore
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        const parent = btn.parentElement;
+
+        // सभी बंद करो
+        document.querySelectorAll(".dropdown").forEach(d => {
+            if (d !== parent) d.classList.remove("active");
+        });
+
+        // current toggle
+        parent.classList.toggle("active");
+    });
+
+});
+
+// PRODUCTS dropdown arrow
+document.querySelector(".dropBtnArrow").addEventListener("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const parent = this.parentElement;
+    parent.classList.toggle("active");
+});
+
+
+// बाहर क्लिक करने पर dropdown बंद
+document.addEventListener("click", () => {
+    document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("active"));
+});
+
+
 // about us 
 // Simple scroll animation
 const elements = document.querySelectorAll('[data-animate]');
@@ -109,3 +147,4 @@ rightBtn.addEventListener("click", () => {
 leftBtn.addEventListener("click", () => {
     slider.scrollLeft -= scrollStep;
 });
+

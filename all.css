@@ -102,6 +102,17 @@ body{overflow-x:hidden;}
   display: block;
 }
 
+.dropMain {
+    padding-right: 6px;
+    cursor: pointer;
+}
+
+.dropBtnArrow {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
 /* Desktop Hover */
 @media (min-width: 769px) {
     .dropdown:hover .dropMenu {
@@ -203,6 +214,125 @@ body{overflow-x:hidden;}
     width: 30px;
     height: 3px;
     background: #000;
+}
+
+
+/* DESKTOP PRODUCTS MEGA MENU SCROLL FIX */
+@media (min-width: 769px) {
+    .dropMenu {
+        max-height: calc(100vh - 120px); /* Screen के हिसाब से auto height */
+        overflow-y: auto;                /* Scroll enable */
+        overflow-x: hidden;              /* Horizontal scroll हटाया */
+        padding-right: 10px;             /* Scroll के लिए space */
+    }
+
+    /* Scrollbar डिजाइन */
+    .dropMenu::-webkit-scrollbar {
+        width: 8px;
+    }
+    .dropMenu::-webkit-scrollbar-thumb {
+        background: #bfbfbf;
+        border-radius: 10px;
+    }
+    .dropMenu::-webkit-scrollbar-thumb:hover {
+        background: #999;
+    }
+}
+
+
+/* ===============================
+   FULL WIDTH MEGA MENU (Desktop)
+   =============================== */
+@media (min-width: 769px) {
+    .dropdown {
+        position: static !important;
+    }
+
+    .dropMenu {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        display: none;
+        padding: 40px 60px;
+        background: #fff;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+        border-radius: 0;
+        z-index: 999;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        min-height: 230px;
+    }
+
+    .dropdown:hover .dropMenu {
+        display: grid !important;
+    }
+
+    .dropMenu li {
+        list-style: none;
+        padding: 6px 0;
+    }
+
+    .dropMenu li a {
+        font-size: 15px;
+        padding: 5px 0;
+        display: block;
+        color: #222;
+        font-weight: 500;
+    }
+
+    .dropMenu li a:hover {
+        color: #7aa62c;
+    }
+}
+
+/* ===============================
+   MOBILE MENU SCROLL FIX
+   =============================== */
+@media (max-width: 768px) {
+
+    /* पूरा mobile menu scrollable */
+    .menu {
+        max-height: calc(100vh - 65px);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    /* बड़ा dropdown हो तो अंदर भी scroll */
+    .dropMenu {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    /* scroll bar smooth रहे */
+    .menu::-webkit-scrollbar,
+    .dropMenu::-webkit-scrollbar {
+        width: 6px;
+    }
+    .menu::-webkit-scrollbar-thumb,
+    .dropMenu::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 10px;
+    }
+}
+
+/* DESKTOP PRODUCTS MEGA MENU SCROLL FIX */
+@media (min-width: 769px) {
+    .dropMenu {
+        max-height: 350px;       /* Dropdown की max height */
+        overflow-y: auto;        /* Scroll enable */
+        overflow-x: hidden;      /* Horizontal scroll हटाया */
+        padding-right: 10px;     /* Scroll के लिए space */
+    }
+
+    /* Scrollbar सुंदर दिखे */
+    .dropMenu::-webkit-scrollbar {
+        width: 6px;
+    }
+    .dropMenu::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 10px;
+    }
 }
 
 
@@ -1915,4 +2045,233 @@ fill: white;
     .dfmd-hero-text h1 { font-size: 26px; }
     .dfmd-grid,
     .models-grid { grid-template-columns: 1fr; }
+}
+
+
+
+
+
+/* services page  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+/* MAIN SECTION */
+.security-section {
+    width: 100%;
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.security-container {
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+/* ITEM BOX */
+.security-item {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 70px;
+
+    /* --- ANIMATION BASE --- */
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeSlide 1s ease-out forwards;
+}
+
+/* --- Animation delay for each item --- */
+.security-item:nth-child(1) { animation-delay: 0.2s; }
+.security-item:nth-child(2) { animation-delay: 0.4s; }
+.security-item:nth-child(3) { animation-delay: 0.6s; }
+.security-item:nth-child(4) { animation-delay: 0.8s; }
+.security-item:nth-child(5) { animation-delay: 1s; }
+.security-item:nth-child(6) { animation-delay: 1.2s; }
+.security-item:nth-child(7) { animation-delay: 1.4s; }
+.security-item:nth-child(8) { animation-delay: 1.6s; }
+
+/* --- KEYFRAMES --- */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ALTERNATE LEFT RIGHT */
+.security-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* IMAGE */
+.security-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    /* slight zoom-in animation */
+    animation: zoomIn 1s ease forwards;
+    opacity: 0;
+}
+
+.security-item:nth-child(odd) .security-image img {
+    animation-delay: 0.4s;
+}
+.security-item:nth-child(even) .security-image img {
+    animation-delay: 0.6s;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* TEXT */
+.security-content h2 {
+    font-size: 30px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.security-content p {
+    color: #555;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .security-item {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .security-item {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .security-image img {
+        max-width: 100%;
+    }
+}
+
+
+
+
+/* product  page */
+.product-section {
+    padding: 40px 7%;
+}
+
+.section-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 25px 0 10px;
+    color: #000;
+}
+
+/* GRID ROW */
+.product-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Laptop */
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* CARD DESIGN */
+.card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.card h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.card .price {
+    font-size: 15px;
+    color: #7aa62c;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.btn-explore {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 18px;
+    background: #7aa62c;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn-explore:hover {
+    background: #5c821f;
+    transform: scale(1.05);
+}
+
+
+/* RESPONSIVE */
+/* Tablet */
+@media (max-width: 992px) {
+    .product-row {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .product-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+    .product-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
