@@ -138,8 +138,31 @@ const slider = document.getElementById("slider");
 const leftBtn = document.getElementById("leftBtn");
 const rightBtn = document.getElementById("rightBtn");
 
-let scrollStep = 250; // Increase for bigger slide
+let scrollStep = 250; 
+let autoScrollSpeed = 1; 
 
+// ---- INFINITE AUTO SCROLL ----
+function autoScroll() {
+    slider.scrollLeft += autoScrollSpeed;
+
+    // If last reached → jump back smoothly
+    if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 1) {
+        slider.scrollLeft = 0;
+    }
+}
+
+let autoPlay = setInterval(autoScroll, 10);
+
+// ---- STOP AUTOSCROLL WHILE USER INTERACTS ----
+slider.addEventListener("mouseenter", () => clearInterval(autoPlay));
+slider.addEventListener("mouseleave", () => autoPlay = setInterval(autoScroll, 10));
+
+leftBtn.addEventListener("mouseenter", () => clearInterval(autoPlay));
+rightBtn.addEventListener("mouseenter", () => clearInterval(autoPlay));
+leftBtn.addEventListener("mouseleave", () => autoPlay = setInterval(autoScroll, 10));
+rightBtn.addEventListener("mouseleave", () => autoPlay = setInterval(autoScroll, 10));
+
+// ---- MANUAL SCROLL ----
 rightBtn.addEventListener("click", () => {
     slider.scrollLeft += scrollStep;
 });
@@ -147,4 +170,5 @@ rightBtn.addEventListener("click", () => {
 leftBtn.addEventListener("click", () => {
     slider.scrollLeft -= scrollStep;
 });
+
 
