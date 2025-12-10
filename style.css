@@ -9,7 +9,6 @@ html, body {
   width: 100%;
 }
 
-
 /* NAVBAR */
 .navbar {
     width: 100%;
@@ -73,6 +72,7 @@ html, body {
     border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.15);
 }
+
 
 .dropMenu li {
     list-style: none;
@@ -228,10 +228,10 @@ html, body {
 /* DESKTOP PRODUCTS MEGA MENU SCROLL FIX */
 @media (min-width: 769px) {
     .dropMenu {
-        max-height: calc(100vh - 120px); /* Screen के हिसाब से auto height */
-        overflow-y: auto;                /* Scroll enable */
-        overflow-x: hidden;              /* Horizontal scroll हटाया */
-        padding-right: 10px;             /* Scroll के लिए space */
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;               
+        overflow-x: hidden;             
+        padding-right: 10px;            
     }
 
     /* Scrollbar डिजाइन */
@@ -1036,7 +1036,7 @@ html, body {
     width: 90%;
     margin: auto;
     overflow: hidden;
-    padding-bottom: 40px; /* space for arrows */
+    /* padding-bottom: 40px;  */
 }
 
 /* SCROLLER */
@@ -1072,12 +1072,12 @@ html, body {
     width: 90%;
     margin: auto;
     overflow: hidden;
-    padding-bottom: 70px;      /* enough space for arrows */
+    /* padding-bottom: 70px;      */
 }
 
-.arrow{
+/* .arrow{
     position: absolute;
-    bottom: 20px;              /* perfect visible position */
+    bottom: 20px;             
     background: #fff;
     border: none;
     padding: 14px 16px;
@@ -1090,17 +1090,17 @@ html, body {
 }
 
 .left{ left: 40px; }
-.right{ right: 40px; }
+.right{ right: 40px; } */
 
 /* Smaller screens */
-@media(max-width: 600px){
+/* @media(max-width: 600px){
     .arrow{
         padding: 10px 12px;
         font-size: 18px;
     }
     .left{ left: 10px; }
     .right{ right: 10px; }
-}
+} */
 
 
 

@@ -174,6 +174,7 @@ html, body {
         padding: 10px 0;
     }
 }
+
 /* Remove bullets properly */
 .nav-links li {
     list-style: none;
@@ -772,7 +773,7 @@ html, body {
     width: 90%;
     margin: auto;
     overflow: hidden;
-    padding-bottom: 40px; /* space for arrows */
+    /* padding-bottom: 40px;  */
 }
 
 /* SCROLLER */
@@ -808,12 +809,12 @@ html, body {
     width: 90%;
     margin: auto;
     overflow: hidden;
-    padding-bottom: 70px;      /* enough space for arrows */
+    /* padding-bottom: 70px;     */
 }
 
-.arrow{
+/* .arrow{
     position: absolute;
-    bottom: 20px;              /* perfect visible position */
+    bottom: 20px;             
     background: #fff;
     border: none;
     padding: 14px 16px;
@@ -826,17 +827,17 @@ html, body {
 }
 
 .left{ left: 40px; }
-.right{ right: 40px; }
+.right{ right: 40px; } */
 
 /* Smaller screens */
-@media(max-width: 600px){
+/* @media(max-width: 600px){
     .arrow{
         padding: 10px 12px;
         font-size: 18px;
     }
     .left{ left: 10px; }
     .right{ right: 10px; }
-}
+} */
 
 /* footer  */
 .footer {
@@ -2271,5 +2272,102 @@ body {
 @media (max-width: 400px) {
     .product-row {
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+
+/* services page  */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+}
+
+.makes-section {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.makes-heading {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* 2 Cards SIDE BY SIDE */
+.makes-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: nowrap;  
+}
+
+/* CARD */
+.make-card {
+    width: 500px;         
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+/* Hover Lift */
+.make-card:hover {
+    transform: translateY(-10px);
+}
+
+/* IMAGE */
+.make-image {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.make-img-tag {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* TEXT hidden by default on desktop */
+.make-desc {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.4s ease;
+    margin-top: 18px;
+    font-size: 18px;
+}
+
+/* Hover to show text */
+.make-card:hover .make-desc {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+
+    .makes-grid {
+        flex-wrap: wrap;     
+    }
+
+    .make-card {
+        width: 90%;          
+    }
+
+    .make-img-tag {
+        height: 220px;
+    }
+
+    .make-desc {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
     }
 }

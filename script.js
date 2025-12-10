@@ -56,16 +56,30 @@ document.querySelectorAll(".dropdown > .dropBtn").forEach(btn => {
 });
 
 // PRODUCTS dropdown arrow
-document.querySelector(".dropBtnArrow").addEventListener("click", function (e) {
-    e.preventDefault();
-    e.stopPropagation();
+// document.querySelector(".dropBtnArrow").addEventListener("click", function (e) {
+//     e.preventDefault();
+//     e.stopPropagation();
 
-    const parent = this.parentElement;
-    parent.classList.toggle("active");
+//     const parent = this.parentElement;
+//     parent.classList.toggle("active");
+// });
+
+
+// // बाहर क्लिक करने पर dropdown बंद
+// document.addEventListener("click", () => {
+//     document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("active"));
+// });
+
+
+document.querySelector(".dropBtnArrow").addEventListener("click", function (e) {
+    e.preventDefault();      // stop link navigation
+    e.stopPropagation();     // stop click bubbling
+
+    const dropdown = this.closest(".dropdown"); // find the parent <li class="dropdown">
+    dropdown.classList.toggle("active");
 });
 
-
-// बाहर क्लिक करने पर dropdown बंद
+// close dropdown when clicking outside
 document.addEventListener("click", () => {
     document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("active"));
 });
