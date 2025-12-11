@@ -374,7 +374,6 @@ html, body {
         overflow-x: hidden;
     }
 
-    /* बड़ा dropdown हो तो अंदर भी scroll */
     .dropMenu {
         max-height: 300px;
         overflow-y: auto;
@@ -395,10 +394,10 @@ html, body {
 /* DESKTOP PRODUCTS MEGA MENU SCROLL FIX */
 @media (min-width: 769px) {
     .dropMenu {
-        max-height: 350px;       /* Dropdown की max height */
-        overflow-y: auto;        /* Scroll enable */
-        overflow-x: hidden;      /* Horizontal scroll हटाया */
-        padding-right: 10px;     /* Scroll के लिए space */
+        max-height: 350px;      
+        overflow-y: auto;       
+        overflow-x: hidden;     
+        padding-right: 10px;    
     }
 
     /* Scrollbar सुंदर दिखे */
