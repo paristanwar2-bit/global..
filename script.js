@@ -37,14 +37,13 @@ dropBtns.forEach((btn) => {
 document.querySelectorAll(".dropdown > .dropBtn").forEach(btn => {
 
     btn.addEventListener("click", function (e) {
-        if (window.innerWidth < 769) return; // mobile ignore
+        if (window.innerWidth < 769) return; 
 
         e.preventDefault();
         e.stopPropagation();
 
         const parent = btn.parentElement;
 
-        // सभी बंद करो
         document.querySelectorAll(".dropdown").forEach(d => {
             if (d !== parent) d.classList.remove("active");
         });
@@ -55,27 +54,11 @@ document.querySelectorAll(".dropdown > .dropBtn").forEach(btn => {
 
 });
 
-// PRODUCTS dropdown arrow
-// document.querySelector(".dropBtnArrow").addEventListener("click", function (e) {
-//     e.preventDefault();
-//     e.stopPropagation();
-
-//     const parent = this.parentElement;
-//     parent.classList.toggle("active");
-// });
-
-
-// // बाहर क्लिक करने पर dropdown बंद
-// document.addEventListener("click", () => {
-//     document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("active"));
-// });
-
-
 document.querySelector(".dropBtnArrow").addEventListener("click", function (e) {
-    e.preventDefault();      // stop link navigation
-    e.stopPropagation();     // stop click bubbling
+    e.preventDefault();     
+    e.stopPropagation();    
 
-    const dropdown = this.closest(".dropdown"); // find the parent <li class="dropdown">
+    const dropdown = this.closest(".dropdown"); 
     dropdown.classList.toggle("active");
 });
 
@@ -84,9 +67,12 @@ document.addEventListener("click", () => {
     document.querySelectorAll(".dropdown").forEach(d => d.classList.remove("active"));
 });
 
+document.querySelector(".closeDrop").addEventListener("click", () => {
+    document.querySelector(".dropdown").classList.remove("active");
+});
+
 
 // about us 
-// Simple scroll animation
 const elements = document.querySelectorAll('[data-animate]');
 
 function checkAnimation(){
@@ -132,6 +118,16 @@ document.querySelectorAll('.product-card').forEach(card => {
     card.style.transition = '0.3s';
   });
 });
+
+const buttons = document.querySelectorAll(".brand-filter .info");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", function () {
+        document.querySelector(".brand-filter .active")?.classList.remove("active");
+        this.classList.add("active");
+    });
+});
+
 
 
 // gallery 
